@@ -8,10 +8,11 @@ public class Contador {
         System.out.println("Digite o parâmetro final: ");
         int finalNumber = terminal.nextInt();
         try {
-            countInteration(startNumber, finalNumber);
-            terminal.close();
+            countInteration(startNumber, finalNumber);     
         } catch (ParametrosInvalidosException e) {
             System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+        } finally {
+            terminal.close();
         }
     }
 
